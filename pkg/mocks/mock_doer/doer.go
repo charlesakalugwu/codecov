@@ -60,3 +60,17 @@ func (mr *MockDoerMockRecorder) SaySomething(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SaySomething", reflect.TypeOf((*MockDoer)(nil).SaySomething), arg0)
 }
+
+// KickSomething mocks base method
+func (m *MockDoer) KickSomething(arg0 string) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "KickSomething", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// KickSomething indicates an expected call of KickSomething
+func (mr *MockDoerMockRecorder) KickSomething(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "KickSomething", reflect.TypeOf((*MockDoer)(nil).KickSomething), arg0)
+}
