@@ -11,9 +11,17 @@ coverage:
     project:
       default:
         threshold: 0.5
+        paths:
+        - cmd
+        - pkg
+        - test
     patch:
       default:
         threshold: 0.5
+          paths:
+          - cmd
+          - pkg
+          - test
     changes: no
 
 parsers:
