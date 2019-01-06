@@ -13,3 +13,7 @@ func (u *User) Use() error {
 func (u *User) Say() error {
 	return u.Doer.SaySomething("Hello GoMock")
 }
+
+func (u *User) Kick() error {
+	return u.Doer.KickSomething("Hello GoMock")
+}
