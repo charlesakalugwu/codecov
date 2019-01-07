@@ -12,16 +12,16 @@ coverage:
       default:
         threshold: 0.5
         paths:
-        - cmd
-        - pkg
-        - test
+        - cmd/
+        - pkg/
+        - test/
     patch:
       default:
         threshold: 0.5
           paths:
-          - cmd
-          - pkg
-          - test
+          - cmd/
+          - pkg/
+          - test/
     changes: no
 
 parsers:
@@ -33,6 +33,6 @@ parsers:
       macro: no
 
 comment:
-  layout: "reach, diff, flags, files"
+  layout: "header, diff"
   behavior: default
   require_changes: no
