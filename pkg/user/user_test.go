@@ -34,3 +34,16 @@ func TestSay(t *testing.T) {
 
 	testUser.Say()
 }
+
+func TestSing(t *testing.T) {
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+
+	mockDoer := mock_doer.NewMockDoer(mockCtrl)
+	testUser := &user.User{Doer: mockDoer}
+
+	// Expect Sing to be called once with "Hello GoMock" as parameter, and return nil from the mocked call.
+	mockDoer.EXPECT().SingSomething("Hello GoMock").Return(nil).Times(1)
+
+	testUser.Sing()
+}
