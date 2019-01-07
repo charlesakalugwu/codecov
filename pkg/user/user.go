@@ -17,3 +17,7 @@ func (u *User) Say() error {
 func (u *User) Kick() error {
 	return u.Doer.KickSomething("Hello GoMock")
 }
+
+func (u *User) Sing() error {
+	return u.Doer.SingSomething("Hello GoMock")
+}
