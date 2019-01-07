@@ -10,4 +10,5 @@ type Doer interface {
 	DoSomething(int, string) error
 	SaySomething(string) error
 	KickSomething(string) error
+	SingSomething(string) error
 }
